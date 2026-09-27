@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1790327036">
+</head>
+<body>
+
+    <section id="accueil" class="hero">
+    <span class="hero-glow hero-glow--a"></span>
+    <span class="hero-glow hero-glow--b"></span>
+    <span class="hero-edge hero-edge--left"></span>
+    <span class="hero-edge hero-edge--right"></span>
+
+    <span class="hero-particle hero-particle--1"></span>
+    <span class="hero-particle hero-particle--2"></span>
+    <span class="hero-particle hero-particle--3"></span>
+    <span class="hero-particle hero-particle--4"></span>
+    <span class="hero-particle hero-particle--5"></span>
+
+    <span class="hero-frame hero-frame--tl" aria-hidden="true"></span>
+    <span class="hero-frame hero-frame--tr" aria-hidden="true"></span>
+    <span class="hero-frame hero-frame--bl" aria-hidden="true"></span>
+    <span class="hero-frame hero-frame--br" aria-hidden="true"></span>
+
+    <span class="hero-status">
+        <span class="hero-status__dot" aria-hidden="true"></span>
+        PORTFOLIO EN LIGNE
+    </span>
+
+    <div class="container hero-content">
+        <div class="hero-text-block">
+
+        <div class="hero-title-row">
+            <h1>MOLLIER-THOMAS Irène</h1>
+            <div class="hero-title-meta">
+            <span class="hero-tag">BUT MMI</span>
+            <span class="hero-version">V2026</span>
+            </div>
+        </div>
+
+        <ul class="hero-skills">
+            <li>Web Design</li>
+            <li>UX / UI</li>
+            <li>Créatif</li>
+            <li>Stratégie de com</li>
+        </ul>
+
+        <div class="hero-start-row">
+        <button type="button" id="start-game" class="hero-start">
+            Commencez
+        </button>
+        </div>
+
+        <div class="hero-hints">
+            <p class="hero-hints__contact">mollierthomasirene@gmail.com</p>
+        </div>
+
+        </div>
+        <img src="profil.png" alt="Portrait de Prénom Nom" class="hero-avatar">
+    </div>
+    </section>
+
+    <div id="game-content" hidden>
+
+    <header class="header">
+    <div class="container header-inner">
+        <a href="#accueil" class="logo">IRÈNE</a>
+        <nav class="nav">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">Profil MMI</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+        </button>
+    </div>
+    </header>
+
+
+    <section id="apropos" class="section">
+    <div class="container">
+        <h2 class="section-title">Profil MMI</h2>
+        <div class="about-content">
+        <div class="about-image">
+            <img src="profil.png" alt="Photo de mon profil MMI">
+        </div>
+        <div class="about-text">
+            <p class="project-tag">ESTR</p>
+            <h3>Designer méthodique</h3>
+            <p><em>Plus qu'une simple MMI.</em></p>
+            <p>
+            J'aime explorer plusieurs pistes pour nourrir ma créativité et offrir plus de choix
+            à mes clients. Organisée et autonome, j'avance mieux seule avant de faire le point en équipe.
+            </p>
+            <p>
+            Être méthodique, c'est aussi rester créative: ce qui compte, c'est un message
+            clair et un design qui plaît, même si les délais courts m'obligent parfois à trancher vite.
+            </p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="projets" class="section">
+    <div class="container">
+        <h2 class="section-title">Mes projets</h2>
+        <div class="projects-grid">
+        <article class="project-card">
+            <img src="logo-agriclick.png" alt="Logo Agriclick" class="project-logo">
+            <div class="project-info">
+            <h3><span class="project-tag">Stage 2025 :</span> Application</h3>
+            <p>Mieux manger, c'est aider nos producteurs.</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet1.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="logo-episerie.png" alt="Logo EPISE" class="project-logo">
+            <div class="project-info">
+            <h3><span class="project-tag">SAE 301 :</span> Site e-commerce</h3>
+            <p>Nous aussi, on peut aider à notre échelle.</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet2.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="affiche-dossier-charmier.jpg" alt="Affiche Le Dossier Charmier" class="project-logo project-logo--cover project-logo--cover-top">
+            <div class="project-info">
+            <h3><span class="project-tag">SAE 302 :</span> Le Dossier Charmier</h3>
+            <p>Apprendre, c'est mieux en s'amusant, seul ou en groupe !</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet3.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="logo-especes-menacees.png" alt="Logo Espèces menacées" class="project-logo">
+            <div class="project-info">
+            <h3><span class="project-tag">SAE 303 :</span> Projet environnemental</h3>
+            <p>Il n'est pas trop tard pour agir.</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet4.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="logo-ludik.jpg" alt="Logo Ludik NC" class="project-logo project-logo--cover">
+            <div class="project-info">
+            <h3><span class="project-tag">SAE 401 :</span> Projet Ludik</h3>
+            <p>Ludik, à votre service.</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet5.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="logo-recif.jpg" alt="Logo RECIF" class="project-logo">
+            <div class="project-info">
+            <h3><span class="project-tag">SAE 402 :</span> Projet RECIF</h3>
+            <p>RECIF, l'occasion de mettre en avant son talent.</p>
+            <div class="project-links">
+                <div class="cta-stage" data-href="projets/projet6.html">
+                <button type="button" class="cta-btn">
+                    <span class="cta-btn__spinner" aria-hidden="true"></span>
+                    <span class="cta-btn__label">Voir le projet</span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </article>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+        <div class="contact-info">
+            <p><strong>Email :</strong> mollierthomasirene@gmail.com</p>
+            <div class="social-links">
+            <a href="https://www.linkedin.com/in/irène-mollier-thomas-8ab7a5396/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/irene_mt2/?hl=fr" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Irène MOLLIER-THOMAS. Tous droits réservés.</p>
+    </div>
+    </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

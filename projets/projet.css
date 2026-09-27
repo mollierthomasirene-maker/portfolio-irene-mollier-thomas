@@ -1,0 +1,463 @@
+/* ===== PAPIER PEINT — motif tuilé fait des objets de cuisine ===== */
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.16;
+  background-repeat: repeat;
+  background-size: 560px 560px;
+  background-image:
+    url("../deco-cocotte.png"),
+    url("../deco-poele.png"),
+    url("../deco-beurre.png"),
+    url("../deco-fromage.png"),
+    url("../deco-fouet.png"),
+    url("../deco-legumes.png"),
+    url("../deco-bouilloire.png"),
+    url("../deco-batteur.png");
+  background-position:
+    10px 20px,
+    300px 60px,
+    500px 250px,
+    120px 300px,
+    420px 400px,
+    40px 460px,
+    260px 20px,
+    170px 190px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    opacity: 0.1;
+  }
+}
+
+.project-detail {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.project-detail .container {
+  position: relative;
+}
+
+/* ===== DÉCOR — petits objets de cuisine dispersés en fond ===== */
+.kitchen-deco {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: visible;
+  display: none;
+}
+
+.kitchen-deco img {
+  position: absolute;
+  opacity: 0.8;
+  filter: drop-shadow(0 12px 16px rgba(59, 35, 23, 0.22));
+}
+
+.kitchen-deco__item--1 { top: -30px;    left: -95px;  width: 190px; transform: rotate(-12deg); }
+.kitchen-deco__item--2 { top: -5px;     right: -95px; width: 170px; transform: rotate(10deg); }
+.kitchen-deco__item--3 { top: 400px;    left: -90px;  width: 300px; transform: rotate(8deg); }
+.kitchen-deco__item--4 { top: 490px;    right: -80px; width: 230px; transform: rotate(-9deg); }
+.kitchen-deco__item--5 { bottom: -20px; left: -85px;  width: 210px; transform: rotate(14deg); }
+.kitchen-deco__item--6 { bottom: -100px; right: -80px; width: 260px; transform: rotate(-6deg); }
+
+@media (min-width: 1440px) {
+  .kitchen-deco {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kitchen-deco img {
+    filter: none;
+  }
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  background: rgba(255, 122, 61, 0.12);
+  border: 2px dashed var(--color-border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.back-link:hover {
+  background: rgba(255, 122, 61, 0.2);
+  transform: translateX(-3px);
+}
+
+.project-detail h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+.project-detail h1 .project-tag {
+  font-family: var(--font-mono);
+}
+
+.project-subtitle {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.project-detail h2 {
+  margin: 30px 0 12px;
+}
+
+.project-detail .project-logo {
+  margin: 0 auto 24px;
+}
+
+.ac-badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background: rgba(138, 155, 110, 0.18);
+  border: 1.5px dashed var(--color-sage);
+  border-radius: 999px;
+}
+
+.ac-badge strong {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+/* ===== LAYOUT "LIVRE" — texte à gauche, visuels à droite ===== */
+.project-book {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.project-book__page {
+  position: relative;
+  background: var(--color-highlight);
+  border: 3px solid var(--color-border);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 6px 0 var(--color-border), 0 16px 28px rgba(59, 35, 23, 0.14);
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-book__page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, transparent 50%, var(--color-bg-alt) 50%);
+  box-shadow: -2px 2px 5px rgba(59, 35, 23, 0.12);
+}
+
+.project-book__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-book__text p {
+  margin-bottom: 16px;
+}
+
+.project-book__text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-book__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-book__media .carousel {
+  margin: 0;
+  width: 100%;
+}
+
+.project-book__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: transparent;
+  font-size: 0;
+  box-shadow: 0 4px 0 var(--color-primary-dark), 0 10px 16px rgba(59, 35, 23, 0.25);
+}
+
+.project-book__arrow::before {
+  content: "";
+  width: 52%;
+  height: 52%;
+  background: #ffffff;
+  clip-path: polygon(0% 34%, 52% 34%, 52% 8%, 100% 50%, 52% 92%, 52% 66%, 0% 66%);
+}
+
+@media (max-width: 860px) {
+  .project-book {
+    grid-template-columns: 1fr;
+  }
+
+  .project-book__arrow {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .project-book__page {
+    padding: 24px;
+  }
+}
+
+/* ===== VIDÉO DE PROJET ===== */
+.project-video {
+  width: 100%;
+  border: 3px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 var(--color-border), 0 14px 22px rgba(59, 35, 23, 0.15);
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.project-book__media .project-video + .project-video {
+  margin-top: 18px;
+}
+
+/* ===== CARROUSEL ===== */
+.carousel {
+  position: relative;
+  margin: 24px 0;
+  border: 3px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 var(--color-border), 0 14px 22px rgba(59, 35, 23, 0.15);
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.4s ease;
+  touch-action: pan-y;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.carousel__slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* Carrousel vidéo : conserve le format d'origine (vertical) des vidéos */
+.project-book__media .carousel--video {
+  width: min(340px, 100%);
+  margin: 0 auto;
+}
+
+.carousel--video .carousel__slide {
+  aspect-ratio: 9 / 16;
+}
+
+.carousel__hint {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* ===== LIGHTBOX — voir une image du carrousel en grand ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(59, 35, 23, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox.is-zoomed {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 16px;
+  border: 4px solid var(--color-highlight);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transform: scale(0.94);
+  cursor: zoom-in;
+  transition: transform 0.25s ease, max-width 0.2s ease, max-height 0.2s ease;
+}
+
+.lightbox.is-open .lightbox__img {
+  transform: scale(1);
+}
+
+.lightbox__img.is-zoomed {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  cursor: zoom-out;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--color-primary-dark), 0 8px 14px rgba(59, 35, 23, 0.3);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.lightbox__close:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.06);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox,
+  .lightbox__img {
+    transition: none;
+  }
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 122, 61, 0.72);
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0 rgba(198, 73, 26, 0.72), 0 5px 10px rgba(59, 35, 23, 0.3);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.carousel__btn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.carousel__btn:active {
+  transform: translateY(calc(-50% + 2px));
+  box-shadow: 0 1px 0 var(--color-primary-dark), 0 2px 6px rgba(59, 35, 23, 0.3);
+}
+
+.carousel__btn--prev {
+  left: 12px;
+}
+
+.carousel__btn--next {
+  right: 12px;
+}
+
+.carousel__dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 243, 224, 0.7);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel__dot.is-active {
+  background: var(--color-secondary);
+  transform: scale(1.2);
+}
+
+@media (max-width: 560px) {
+  .carousel__btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}

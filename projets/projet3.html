@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 302 : Le Dossier Charmier - Mon Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=1790327036">
+    <link rel="stylesheet" href="projet.css?v=1790327036">
+</head>
+<body>
+
+    <header class="header">
+    <div class="container header-inner">
+        <a href="../PortFolio.html" class="logo">Irène</a>
+        <nav class="nav">
+        <ul>
+            <li><a href="../PortFolio.html#accueil">Accueil</a></li>
+            <li><a href="../PortFolio.html#projets">Projets</a></li>
+            <li><a href="../PortFolio.html#contact">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+
+    <section class="section project-detail">
+    <div class="container">
+        <div class="kitchen-deco" aria-hidden="true">
+            <img src="../deco-beurre.png" alt="" class="kitchen-deco__item--1">
+            <img src="../deco-fromage.png" alt="" class="kitchen-deco__item--2">
+            <img src="../deco-fouet.png" alt="" class="kitchen-deco__item--3">
+            <img src="../deco-legumes.png" alt="" class="kitchen-deco__item--4">
+            <img src="../deco-bouilloire.png" alt="" class="kitchen-deco__item--5">
+            <img src="../deco-batteur.png" alt="" class="kitchen-deco__item--6">
+        </div>
+
+        <a href="../PortFolio.html#projets" class="back-link">&larr; Retour aux projets</a>
+
+        <h1><span class="project-tag">SAE 302 :</span> Le Dossier Charmier</h1>
+        <p class="project-subtitle">Apprendre, c'est mieux en s'amusant, seul ou en groupe !</p>
+
+        <div class="project-book">
+            <div class="project-book__page project-book__text">
+                <img src="../affiche-dossier-charmier.jpg" alt="Affiche Le Dossier Charmier" class="project-logo project-logo--cover project-logo--cover-top">
+
+                <p class="ac-badge"><strong>AC 25.04</strong> Collaborer au sein des organisations</p>
+
+                <p>
+                    Un jeu de parcours interactif pour faire découvrir l'histoire d'Émile Charmier,
+                    personnage historique né en 1845, à un public jeune ou plus âgé.
+                    Le jeu utilisait des QR codes, des audios et une vidéo d'introduction pour immerger les joueurs dans son univers.
+                </p>
+
+                <p>
+                    Ma plus grosse difficulté : le manque d'investissement d'un membre du groupe.
+                    Malgré plusieurs tentatives pour le motiver, peu de changements se sont fait ressentir.
+                    Ce projet m'a confrontée à la réalité de la collaboration : travailler en équipe, ce n'est pas seulement se répartir des tâches,
+                    c'est aussi s'adapter aux personnalités, ajuster sa communication et parfois accepter de revoir ses attentes.
+                    J'en retiens que je n'ai pas été assez à l'écoute. Pour mes futurs projets,
+                    je m'engage à mieux adapter les missions à chacun afin que la collaboration soit réellement efficace pour tout le groupe.
+                </p>
+            </div>
+
+            <span class="project-book__arrow" aria-hidden="true">&rarr;</span>
+
+            <div class="project-book__page project-book__media">
+                <!-- Carrousel : images placeholder, à remplacer par de vraies captures du projet -->
+                <div class="carousel">
+                    <div class="carousel__track">
+                    <div class="carousel__slide"><img src="../affiche-dossier-charmier.jpg" alt="Aperçu 1 du projet Le Dossier Charmier"></div>
+                    <div class="carousel__slide"><img src="../charte_graphique.png" alt="Aperçu 2 du projet Le Dossier Charmier"></div>
+                    <div class="carousel__slide"><img src="../IUT.jpg" alt="Aperçu 2 du projet Le Dossier Charmier"></div>
+                    </div>
+                    <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Image précédente">&larr;</button>
+                    <button type="button" class="carousel__btn carousel__btn--next" aria-label="Image suivante">&rarr;</button>
+                    <div class="carousel__dots"></div>
+                </div>
+                <p class="carousel__hint">Cliquez sur une image pour l'agrandir</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Irène MOLLIER-THOMAS. Tous droits réservés.</p>
+    </div>
+    </footer>
+
+    <script src="carousel.js"></script>
+</body>
+</html>
